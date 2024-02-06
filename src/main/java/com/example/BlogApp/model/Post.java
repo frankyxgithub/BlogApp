@@ -24,8 +24,9 @@ public class Post {
     private LocalDateTime updatedAt;
     @NotNull
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
-    private User user;
+    @JoinColumn(name = "account_id", referencedColumnName = "id", nullable = false)
+    private Account account;
+
 
 
 }

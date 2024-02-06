@@ -3,6 +3,7 @@ package com.example.BlogApp.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -12,7 +13,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -22,8 +23,12 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "account")
     private List<Post> posts;
+
+    private LocalDateTime createAt;
+
+    private LocalDateTime updateAt;
 
 
 }
