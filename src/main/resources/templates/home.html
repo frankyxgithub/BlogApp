@@ -12,10 +12,12 @@
     <div class="container">
         <h1>Frank's Blog </h1>
         <hr />
-        <div class="post-container">
+        <ul>
+            <li><a th:href="@{/posts/new}">New Post</a></li>
+        </ul>
+        <div class="posts-container">
             <div class="post" th:each="post : ${posts}">
-                <h2>
-                    <a th:href="@{'/posts/' + ${post.id}}"
+                <h2><a th:href="@{'/posts/' + ${post.id}}"
                        th:text="${post.title}">Title</a>
                 </h2>
                 <h5 th:text="'Written by ' + ${post.account.firstName}">Account First name</h5>
@@ -24,6 +26,11 @@
                 <br />
             </div>
         </div>
+        <hr />
+        <ul>
+            <li><a th:href="@{/register}">Register</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+        </ul>
 
     </div>
 </body>

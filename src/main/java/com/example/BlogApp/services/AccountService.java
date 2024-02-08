@@ -5,6 +5,8 @@ import com.example.BlogApp.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class AccountService {
 
@@ -15,4 +17,7 @@ public class AccountService {
         return accountRepository.save(account);
     }
 
+    public Optional<Account> findByEmail(String email) {
+        return accountRepository.findOneByEmail(email);
+    }
 }
