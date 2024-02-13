@@ -1,0 +1,61 @@
+2024-02-06 14:56:33.714814+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]account cascade "; expected "identifier"; SQL statement:
+drop table if exists account cascade  [42001-224]
+2024-02-06 14:56:33.750240+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]account (create_at timestamp(6), id bigint not null, update_at timestamp(6), email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table account (create_at timestamp(6), id bigint not null, update_at timestamp(6), email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), primary key (id)) [42001-224]
+2024-02-06 14:56:33.752872+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post add constraint FK72mt33dhhs48hf9gcqrq4fxte foreign key (user_id) references [*]account"; expected "identifier"; SQL statement:
+alter table if exists post add constraint FK72mt33dhhs48hf9gcqrq4fxte foreign key (user_id) references account [42001-224]
+2024-02-06 14:56:35.141425+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]account (create_at,email,first_name,last_name,password,update_at,id) values (?,?,?,?,?,?,?)"; expected "identifier"; SQL statement:
+insert into account (create_at,email,first_name,last_name,password,update_at,id) values (?,?,?,?,?,?,?) [42001-224]
+2024-02-06 14:56:35.218422+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]account cascade "; expected "identifier"; SQL statement:
+drop table if exists account cascade  [42001-224]
+2024-02-06 14:59:19.250027+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]account cascade "; expected "identifier"; SQL statement:
+drop table if exists account cascade  [42001-224]
+2024-02-06 14:59:19.282351+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]account (create_at timestamp(6), id bigint not null, update_at timestamp(6), email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table account (create_at timestamp(6), id bigint not null, update_at timestamp(6), email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), primary key (id)) [42001-224]
+2024-02-06 14:59:19.284624+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post add constraint FK72mt33dhhs48hf9gcqrq4fxte foreign key (user_id) references [*]account"; expected "identifier"; SQL statement:
+alter table if exists post add constraint FK72mt33dhhs48hf9gcqrq4fxte foreign key (user_id) references account [42001-224]
+2024-02-06 14:59:20.538445+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]account (create_at,email,first_name,last_name,password,update_at,id) values (?,?,?,?,?,?,?)"; expected "identifier"; SQL statement:
+insert into account (create_at,email,first_name,last_name,password,update_at,id) values (?,?,?,?,?,?,?) [42001-224]
+2024-02-06 14:59:20.608242+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]account cascade "; expected "identifier"; SQL statement:
+drop table if exists account cascade  [42001-224]
+2024-02-06 15:10:28.317927+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]account (id bigint not null, create_at timestamp(6), email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), update_at timestamp(6), primary key (id))"; expected "identifier"; SQL statement:
+create table account (id bigint not null, create_at timestamp(6), email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), update_at timestamp(6), primary key (id)) [42001-224]
+2024-02-06 15:10:28.336196+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists post add constraint FK72mt33dhhs48hf9gcqrq4fxte foreign key (user_id) references [*]account"; expected "identifier"; SQL statement:
+alter table if exists post add constraint FK72mt33dhhs48hf9gcqrq4fxte foreign key (user_id) references account [42001-224]
+2024-02-06 15:10:29.674121+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]account (create_at,email,first_name,last_name,password,update_at,id) values (?,?,?,?,?,?,?)"; expected "identifier"; SQL statement:
+insert into account (create_at,email,first_name,last_name,password,update_at,id) values (?,?,?,?,?,?,?) [42001-224]
+2024-02-06 15:23:06.655150+01:00 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:733)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more
